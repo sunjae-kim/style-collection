@@ -1,0 +1,25 @@
+html,
+body {
+  height: 150%;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  box-shadow: 0px 0px 10px #cecece;
+}
+
+header > ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > ul > li:not(:first-child) {
+  margin-left: 0.5em;
+}
