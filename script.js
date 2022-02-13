@@ -15,7 +15,6 @@ const getSelectedResource = () => {
   let isResizing = false;
   let isMobile = false;
   let clientX, clientY;
-  const resizeWidth = localStorage.getItem('resize-val');
 
   const onWindowResize = () => {
     width =

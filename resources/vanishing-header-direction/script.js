@@ -1,9 +1,9 @@
-const header = document.querySelector("header");
+const header = document.querySelector('header');
 const height = header.clientHeight;
 let history = [];
 let prev = 0;
 
-document.addEventListener("scroll", () => {
+document.addEventListener('scroll', () => {
   const current = window.scrollY;
   const delta = prev - current;
   const pivot = 10;
@@ -15,8 +15,9 @@ document.addEventListener("scroll", () => {
   if (history.length > pivot) history = history.splice(1, pivot);
 
   // history가 모두 동일한 delta 방향을 가지고 있다면 헤더 toggle
-  const upWard = history.every((x) => x > 0);
-  const downWard = history.every((x) => x < 0);
+  const upWard = history.every(x => x > 0);
+  const downWard = history.every(x => x < 0);
+
   if (upWard) header.style.top = `${max}px`;
   if (downWard) header.style.top = `${min}px`;
 

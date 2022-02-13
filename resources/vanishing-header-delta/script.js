@@ -1,8 +1,8 @@
-const header = document.querySelector("header");
+const header = document.querySelector('header');
 const height = header.clientHeight;
 let prev = 0;
 
-document.addEventListener("scroll", () => {
+document.addEventListener('scroll', () => {
   const current = window.scrollY;
   const delta = prev - current;
   const top = Number(/-?\d*/.exec(header.style.top)[0]) || 0;
